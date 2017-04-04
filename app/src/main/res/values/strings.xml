@@ -128,6 +128,9 @@
     <string name="aproof">Address Proof</string>
     <string name="choose_address_proof">Choose Addess Proof</string>
     <string name="caddtype">Choose address type</string>
+    <string name="eyidt">Enter your ID proof type</string>
+    <string name="eyaddt">Enter your Address proof type</string>
+
 
     *****************Security Questions*****************
     <string name="sq">Security Questions</string>

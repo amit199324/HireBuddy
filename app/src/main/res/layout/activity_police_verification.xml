@@ -203,7 +203,7 @@
             android:layout_margin="@dimen/dp_20"
             android:textSize="@dimen/_14sdp"
             android:gravity="center|center_vertical"
-            android:textColor="@color/red"
+            android:textColor="#DBDBDB"
             android:text="@string/nrid"
             />
 
