@@ -198,4 +198,5 @@
     <string name="a_z"> abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ </string>
     <string name="zero_9">1234567890</string>
     <string name="crs">Customer Registration Successful</string>
+    <string name="har_zaroorat_ka_sathi">\"Har Zaroorat ka sathi\"</string>
 </resources>
