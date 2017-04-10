@@ -94,6 +94,7 @@ public class SecurityQuestionsActivity extends AppCompatActivity implements Adap
         }
         else if(spinner.getId() == R.id.spin_syqt)
         {
+
             txt_sqt.setText(item);
             if (txt_sqt.getText().toString().equalsIgnoreCase("Other")){
                 txt_sqt.setTextColor(getResources().getColor(R.color.yellow));

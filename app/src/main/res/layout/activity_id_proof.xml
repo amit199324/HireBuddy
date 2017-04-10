@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
+    android:id="@+id/activity_id_proof"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    />
-<LinearLayout
-    android:id="@+id/activity_id_proof"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_color_profile"
-    >
+    android:background="@color/background_color_profile">
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -20,6 +17,13 @@
         android:textSize="@dimen/sp_20"
         android:text="@string/idproof"
         android:gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:layout_marginTop="@dimen/dp_20"
         android:layout_width="match_parent"
@@ -255,7 +259,8 @@
         android:layout_height="wrap_content"
         android:onClick="next"
         android:background="@drawable/fill_button_pressed_selector"
-        android:layout_marginBottom="@dimen/dp_20"
-        />
+        android:layout_marginBottom="@dimen/dp_20"/>
+
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-</ScrollView>

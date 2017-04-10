@@ -178,7 +178,7 @@ public class PoliceVerificationActivity extends AppCompatActivity implements Rad
 
                 break;
             case R.id.txt_veriproof:
-                takePic();
+                takePic(5);
                 break;
             case R.id.txt_pvudoc_remove:
                 txt_veriproof.setText(getString(R.string.nfs));
@@ -187,7 +187,7 @@ public class PoliceVerificationActivity extends AppCompatActivity implements Rad
         }
     }
 
-    private void takePic() {
+    private void takePic(final int value) {
         final Dialog dialog = new Dialog(this, android.R.style.Theme_Translucent);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.transparent)));
@@ -238,6 +238,7 @@ public class PoliceVerificationActivity extends AppCompatActivity implements Rad
             public void onClick(View view) {
                 Intent intent = new Intent(PoliceVerificationActivity.this, TakeImage.class);
                 intent.putExtra("from", "camera");
+                intent.putExtra("value", value);
                 startActivityForResult(intent, CAMERA_REQUEST);
                 dialog.dismiss();
             }
@@ -247,6 +248,7 @@ public class PoliceVerificationActivity extends AppCompatActivity implements Rad
             public void onClick(View view) {
                 Intent intent = new Intent(PoliceVerificationActivity.this, TakeImage.class);
                 intent.putExtra("from", "gallery");
+                intent.putExtra("value", value);
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
                 dialog.cancel();
             }
@@ -268,14 +270,14 @@ public class PoliceVerificationActivity extends AppCompatActivity implements Rad
             path = data.getStringExtra("filePath");
             if (path != null) {
                 File imgFile = new File(data.getStringExtra("filePath"));
-                if (imgFile.exists()) {
+//                if (imgFile.exists()) {
 //                    .setImageURI(Uri.fromFile(imgFile));
                     int count = 0;
                     count = path.lastIndexOf("/");
 
                     txt_veriproof.setText(path.substring(count+1));
 
-                }
+//                }
             }else if(requestCode == CHOOSE_FILE_REQUESTCODE){
                 path = data.getData().getPath();
                 if (path != null) {

@@ -17,10 +17,13 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -32,14 +35,19 @@ import com.hirebuddy.R;
 import com.hirebuddy.sharedprefrences.SPreferenceKey;
 import com.hirebuddy.sharedprefrences.SharedPreferenceWriter;
 import com.hirebuddy.util.MyToast;
+import com.hirebuddy.util.ScrollableImageView;
 import com.hirebuddy.util.TakeImage;
 import com.hirebuddy.util.TakeImage2;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Pattern;
+
+import static android.R.attr.bitmap;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
@@ -54,6 +62,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     EditText edt_first_name_profile, edt_last_name_profile, edt_email_profile;
     ImageView circular_image_pofile;
     private int i;
+    String path = "";
     boolean circular;
 
     // LISTENER FOR DATE PICKER
@@ -175,6 +184,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.img_coveruicon).setOnClickListener(this);
 //        img_backimage.setOnClickListener(this);
 
+
         ll_dob = (LinearLayout) findViewById(R.id.ll_dob);
         ll_dob.setOnClickListener(this);
 
@@ -192,16 +202,21 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         datePickerDialog.getDatePicker().setMaxDate(calendar.getTimeInMillis());
 
     }
-
-    //NEXT BUTTON LISTENER
+    private void setImageBitmap(Bitmap bmp) {
+        ImageView imageView = new ScrollableImageView(this);
+        imageView.setScaleType(ImageView.ScaleType.FIT_START);
+        imageView.canScrollHorizontally(0);
+        imageView.setLayoutParams(new FrameLayout.LayoutParams(1080, getWindow().getDecorView().getHeight()));
+        imageView.setImageBitmap(bmp);
+        ViewGroup container = (ViewGroup) findViewById(R.id.linearLayout);
+        container.addView(imageView);
+    }
     public void next(View view) {
-
         validation(view);
-
     }
 
     public void validation(View view) {
-        if (circular){
+        if (circular) {
             if (edt_first_name_profile.getText().toString().length() > 0) {
                 if (edt_last_name_profile.getText().toString().length() > 0) {
                     if (!(txt_dob_profile.getText().toString().equalsIgnoreCase(getString(R.string.ddmmyy)))) {
@@ -209,15 +224,15 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                             if (patternForEmailId.matcher(edt_email_profile
                                     .getText().toString().trim()).matches()) {
 
-                                 if (SharedPreferenceWriter.getInstance(this).getString(SPreferenceKey.LOGIN).equals("customer")) {
-                                        Snackbar.make(view, "Home Screen", Snackbar.LENGTH_SHORT).show();
-                                 } else if (SharedPreferenceWriter.getInstance(this).getString(SPreferenceKey.LOGIN).equals("temporary")) {
-                                        startActivity(new Intent(this, ReferenceContactsActivity.class));
-                                         overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-                                 } else {
-                                     startActivity(new Intent(this, SecurityQuestionsActivity.class));
-                                     overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-                                 }
+                                if (SharedPreferenceWriter.getInstance(this).getString(SPreferenceKey.LOGIN).equals("customer")) {
+                                    Snackbar.make(view, "Home Screen", Snackbar.LENGTH_SHORT).show();
+                                } else if (SharedPreferenceWriter.getInstance(this).getString(SPreferenceKey.LOGIN).equals("temporary")) {
+                                    startActivity(new Intent(this, ReferenceContactsActivity.class));
+                                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+                                } else {
+                                    startActivity(new Intent(this, SecurityQuestionsActivity.class));
+                                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+                                }
 
                             } else {
                                 Snackbar.make(view, getString(R.string.pevei), Snackbar.LENGTH_SHORT)
@@ -247,7 +262,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 //                edt_first_name_profile.setError(getString(R.string.peyln));
 //                ((TextInputLayout)findViewById(R.id.til_fname)).setError(getString(R.string.peyln));
             }
-        }else {
+        } else {
             Snackbar.make(view, getString(R.string.puyi), Snackbar.LENGTH_SHORT).show();
         }
     }
@@ -265,13 +280,16 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.circular_image_pofile:
                 i = 1;
-                takePic(1);
-
+                takePic(5);
                 break;
 
             case R.id.img_coveruicon:
                 i = 2;
-                takePic(2);
+//                DisplayMetrics displayMetrics = new DisplayMetrics();
+//                getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+//                int height = displayMetrics.heightPixels;
+//                int width = displayMetrics.widthPixels;
+                takePic(25);
                 break;
         }
     }
@@ -340,18 +358,36 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data != null) {
-            String filePath = data.getExtras().getString("filePath");
-            if (filePath != null) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == this.RESULT_OK || requestCode == 0) {
+//            String filePath = data.getExtras().getString("filePath");
+            path = data.getStringExtra("filePath");
+            if (path != null) {
 
-                Bitmap blurred = blurRenderScript(this, BitmapFactory.decodeFile(filePath), 10);
-                if (i == 1){
-                    circular_image_pofile.setImageURI(Uri.fromFile(new File(filePath)));
+//                Bitmap image = blurRenderScript(this, BitmapFactory.decodeFile(path), 10);
+
+                if (i == 1) {
+                    circular_image_pofile.setImageURI(Uri.parse(path));
                     circular = true;
 
-                }else if (i == 2){
-                    img_backimage.setImageURI(Uri.fromFile(new File(filePath)));
-//                    img_backimage.setImageBitmap(blurred);
+                } else if (i == 2) {
+
+//                    Bitmap bitmap = BitmapFactory.decodeFile(path, new BitmapFactory.Options());
+//                    bitmap = Bitmap.createScaledBitmap(bitmap,parent.getWidth(),parent.getHeight(),true);
+
+                    Bitmap bMap = BitmapFactory.decodeFile(path);
+                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                    bMap .compress(Bitmap.CompressFormat.JPEG, 50, baos);
+                    //bMap is the bitmap object
+                    byte[] b = baos.toByteArray();
+
+                    File image = new File(path);
+                    Intent intent = new Intent(this, ProfileEditActivity.class);
+                    intent.putExtra("image",path);
+//                    ("path", path);
+                    startActivity(intent);
+
+                    setImageBitmap(bMap);
                 }
             }
         }

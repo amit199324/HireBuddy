@@ -1,160 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_create_buddy_pin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color_profile"
     android:orientation="vertical"
-    tools:context="com.hirebuddy.activity.CreateBuddyPinActivity"
-    android:background="@color/background_color_profile">
+    tools:context="com.hirebuddy.activity.CreateBuddyPinActivity">
 
-    <!--HEADER-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:textColor="@color/white"
         android:background="@color/header"
-        android:textSize="@dimen/sp_20"
-        android:text="@string/create_buddy_pin"
         android:gravity="center"
-        />
+        android:text="@string/create_buddy_pin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20" />
+
     <ImageView
-        android:contentDescription="@string/applogo"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_80sdp"
-        android:src="@drawable/appicon"
-        android:layout_marginTop="@dimen/dp_40"
         android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginTop="@dimen/dp_40"
+        android:contentDescription="@string/applogo"
+        android:src="@drawable/appicon" />
 
     <TextView
-        android:layout_marginTop="@dimen/dp_30"
-        android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_16"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="center"
         android:text="@string/pcbp"
-        android:gravity="center"/>
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
 
     <!--BUDDY PIN-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30"
-        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_25"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"
         android:textColorHint="@color/yellow"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
         app:passwordToggleDrawable="@drawable/hidable"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/yellow"
-        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
-
-        >
+        app:passwordToggleTint="@color/yellow">
 
         <EditText
             android:id="@+id/edt_buddy_pin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_buddy_pin"
-            android:inputType="numberPassword"
-            android:textColor="@color/black"
-            android:maxLength="6"
-            android:textSize="@dimen/sp_16"
             android:background="@android:color/transparent"
             android:digits="@string/zero_9"
+            android:hint="@string/enter_buddy_pin"
             android:imeOptions="actionNext"
-            />
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
     </android.support.design.widget.TextInputLayout>
+
     <View
-        android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_25"
-        />
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/grey" />
 
 
-    <!--CONFIRM BUDDY PIN-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30"
-        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_25"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"
         android:textColorHint="@color/yellow"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
         app:passwordToggleDrawable="@drawable/hidable"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/yellow"
-        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
-        >
+        app:passwordToggleTint="@color/yellow">
 
         <EditText
             android:id="@+id/edt_confirm_buddy_pin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/confirm_buddy_pin"
-            android:inputType="numberPassword"
-            android:textSize="@dimen/sp_16"
-            android:textColor="@color/black"
-            android:maxLength="6"
             android:background="@android:color/transparent"
             android:digits="@string/zero_9"
+            android:hint="@string/confirm_buddy_pin"
             android:imeOptions="actionDone"
-            />
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
     </android.support.design.widget.TextInputLayout>
 
     <View
-        android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_25"
-        />
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/grey" />
 
-    <!--MATCHED-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5">
-    <ImageView
-        android:id="@+id/img_checked_cbp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:src="@drawable/matched"
-        android:layout_toLeftOf="@+id/tv_matched_cbp"
-        android:layout_marginRight="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_5"
-        />
 
-    <TextView
-        android:id="@+id/tv_matched_cbp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/matched"
-        android:textColor="@color/matched_text_color"
-        android:layout_marginRight="@dimen/dp_10"
-        android:layout_alignParentRight="true"
-        />
+        <ImageView
+            android:id="@+id/img_checked_cbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_toStartOf="@+id/tv_matched_cbp"
+            android:contentDescription="@string/matchedsymbol"
+            android:src="@drawable/matched" />
+
+        <TextView
+            android:id="@+id/tv_matched_cbp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="@string/matched"
+            android:textColor="@color/matched_text_color" />
     </RelativeLayout>
 
-    <!--CREATE BUTTON-->
     <Button
+        style="@style/ButtonfillStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_90"
         android:layout_marginRight="@dimen/dp_90"
         android:layout_marginTop="@dimen/dp_60"
-        android:text="@string/create"
-        android:textColor="@color/black"
         android:background="@drawable/fill_button_pressed_selector"
-        android:textAllCaps="false"
         android:onClick="create"
-        style="@style/ButtonfillStyle"
-        />
+        android:text="@string/create"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
 </LinearLayout>

@@ -199,4 +199,10 @@
     <string name="zero_9">1234567890</string>
     <string name="crs">Customer Registration Successful</string>
     <string name="har_zaroorat_ka_sathi">\"Har Zaroorat ka sathi\"</string>
+    <string name="userimage">userimage</string>
+    <string name="uploadimageicon">uploadimageicon</string>
+    <string name="gendericon">gendericon</string>
+    <string name="coverimage">coverimage</string>
+    <string name="matchedsymbol">matchedsymbol</string>
+    <string name="title_activity_profile_edit">ProfileEditActivity</string>
 </resources>

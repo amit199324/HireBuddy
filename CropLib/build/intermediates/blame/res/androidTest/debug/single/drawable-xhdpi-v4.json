@@ -1,38 +1,38 @@
 [
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_rotate_left.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_rotate_left.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/right_image.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/right_image.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/right_image.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/right_image.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/btn_crop_pressed.9.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/btn_crop_pressed.9.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/camera_crop_height.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/camera_crop_height.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/indicator_autocrop.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/indicator_autocrop.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_rotate_right.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_rotate_right.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/btn_crop_operator.9.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/btn_crop_operator.9.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/left_image.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/left_image.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/left_image.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/left_image.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/camera_crop_width.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/camera_crop_width.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_rotate_left.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_rotate_left.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/btn_crop_operator.9.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/btn_crop_operator.9.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/camera_crop_width.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/camera_crop_width.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/indicator_autocrop.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/indicator_autocrop.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/camera_crop_height.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/camera_crop_height.png"
     },
     {
-        "merged": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/btn_crop_pressed.9.png",
-        "source": "/home/mobulous66/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/btn_crop_pressed.9.png"
+        "merged": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/ic_rotate_right.png",
+        "source": "/home/mobulous11/HireBuddy/CropLib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ic_rotate_right.png"
     }
 ]

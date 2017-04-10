@@ -14,6 +14,7 @@ import com.hirebuddy.*;
 
 public class SplashActivity extends AppCompatActivity {
     ImageView splash;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +26,10 @@ public class SplashActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-                    finish();
+
+                startActivity(new Intent(SplashActivity.this, ProfileActivity.class));
+                overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+                finish();
             }
         }, 1500);
     }

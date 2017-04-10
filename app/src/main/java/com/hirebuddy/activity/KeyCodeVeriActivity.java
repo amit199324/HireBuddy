@@ -18,13 +18,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.hirebuddy.R;
 import com.hirebuddy.sharedprefrences.SPreferenceKey;
 import com.hirebuddy.sharedprefrences.SharedPreferenceWriter;
 import com.hirebuddy.util.TakeImage;
-import com.hirebuddy.util.TakeImage2;
+
 
 import java.io.File;
 
@@ -242,13 +241,11 @@ public class KeyCodeVeriActivity extends AppCompatActivity implements View.OnCli
         if (resultCode == this.RESULT_OK) {
             path = data.getStringExtra("filePath");
             if (path != null) {
-                File imgFile = new File(data.getStringExtra("filePath"));
-                if (imgFile.exists()) {
-                    img_kcv_ui.setImageURI(Uri.fromFile(imgFile));
+                File imgFile = new File(path);
+                    img_kcv_ui.setImageURI(Uri.parse(path));
                     int count = 0;
                     count = path.lastIndexOf("/");
                         tvImagePath.setText(path.substring(count+1));
-                }
 
 //            }else if(requestCode == CHOOSE_FILE_REQUESTCODE){
 //                path = data.getData().getPath();

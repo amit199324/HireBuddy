@@ -168,11 +168,12 @@ public class IdProofActivity extends AppCompatActivity implements AdapterView.On
         galleryTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialog.dismiss();
                 Intent intent = new Intent(IdProofActivity.this, TakeImage.class);
                 intent.putExtra("from", "gallery");
                 intent.putExtra("value", value);
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
-                dialog.cancel();
+
             }
         });
 
@@ -216,8 +217,6 @@ public class IdProofActivity extends AppCompatActivity implements AdapterView.On
             }
         }
 
-
-
     }
 
     public void onNothingSelected(AdapterView<?> arg0) {
@@ -236,7 +235,7 @@ public class IdProofActivity extends AppCompatActivity implements AdapterView.On
             path = data.getStringExtra("filePath");
             if (path != null) {
                 File imgFile = new File(data.getStringExtra("filePath"));
-                if (imgFile.exists()) {
+//                if (imgFile.exists()) {
 //                    .setImageURI(Uri.fromFile(imgFile));
                     int count = 0;
                     count = path.lastIndexOf("/");
@@ -245,7 +244,7 @@ public class IdProofActivity extends AppCompatActivity implements AdapterView.On
                     } else if (from == 2) {
                         txt_uaddproof.setText(path.substring(count + 1));
                     }
-                }
+//                }
             } else if (requestCode == CHOOSE_FILE_REQUESTCODE) {
                 path = data.getData().getPath();
                 if (path != null) {
@@ -316,26 +315,26 @@ public class IdProofActivity extends AppCompatActivity implements AdapterView.On
                     if (edt_eyq_addproof.getText().toString().equals("")){
                         edt_eyq_addproof.setError("Enter Address proof type");
                     }else {
-                        takePic(1);
-                        from = 1;
+                        takePic(5);
+                        from = 2;
                     }
                 }else {
-                    takePic(1);
-                    from = 1;
+                    takePic(5);
+                    from = 2;
                 }
-                takePic(1);
-                from = 2;
+//                takePic(1);
+//                from = 2;
                 break;
             case R.id.txt_uidproof:
                 if (txt_s_one.getText().toString().equalsIgnoreCase("other")){
                     if (edt_eyq_idproof.getText().toString().equals("")){
                         edt_eyq_idproof.setError("Enter ID proof type");
                     }else {
-                        takePic(1);
+                        takePic(5);
                         from = 1;
                     }
                 }else {
-                    takePic(1);
+                    takePic(5);
                     from = 1;
                 }
 

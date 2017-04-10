@@ -2,96 +2,96 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@color/background_color_profile"
+    android:orientation="vertical"
     tools:context="com.hirebuddy.activity.ProfileActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:textColor="@color/white"
         android:background="@color/header"
-        android:textSize="@dimen/sp_20"
+        android:gravity="center"
         android:text="@string/profile_info"
-        android:gravity="center"/>
-    <ScrollView
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"/>
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginBottom="@dimen/dp_20">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+
         <ImageView
             android:id="@+id/img_backimage"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_200"
-            android:src="@drawable/bg_profile"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/coverimage"
+            android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            />
-        <!--<ImageView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dp_200"-->
-            <!--android:background="@color/blurr"-->
-            <!--/>-->
-
+            android:src="@drawable/bg_profile"/>
+            </FrameLayout>
         <ImageView
             android:id="@+id/img_coveruicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cam"
-            android:layout_margin="@dimen/dp_10"/>
+            android:layout_margin="@dimen/dp_10"
+            android:contentDescription="@string/uploadimageicon"
+            android:src="@drawable/cam"/>
 
-        <ImageView
-            android:id="@+id/imageView_logo"
-            android:layout_width="@dimen/dp_40"
-            android:layout_height="@dimen/dp_40"
-            android:src="@drawable/logo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dp_50"
-            />
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView_logo"-->
+            <!--android:layout_width="@dimen/dp_40"-->
+            <!--android:layout_height="@dimen/dp_40"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="@dimen/dp_50"-->
+            <!--android:contentDescription="@string/applogo"-->
+            <!--android:src="@drawable/logo"/>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView_logo"
-            android:text="@string/har_zaroorat_ka_sathi"
-            android:layout_centerHorizontal="true"/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/imageView_logo"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="@string/har_zaroorat_ka_sathi"/>-->
 
-<RelativeLayout
-    android:layout_width="@dimen/dp_120"
-    android:layout_height="@dimen/dp_120"
-    android:layout_below="@+id/img_coveruicon"
-    android:layout_alignParentEnd="true"
-    android:layout_marginEnd="@dimen/dp_10"
-    android:layout_marginTop="95dp"
-    android:background="@drawable/square_box">
+
         <ImageView
             android:id="@+id/circular_image_pofile"
-            android:layout_width="@dimen/dp_110"
-            android:layout_height="@dimen/dp_110"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/appicon"
-            android:scaleType="centerCrop"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
             android:background="@color/black"
-            />
+            android:contentDescription="@string/userimage"
+            android:scaleType="fitXY"
+            android:src="@drawable/appicon"
+            android:layout_below="@+id/img_coveruicon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_77"
+            android:layout_marginEnd="@dimen/dp_10"/>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cam"
             android:layout_alignBottom="@+id/circular_image_pofile"
-            android:layout_alignRight="@+id/circular_image_pofile"/>
-    </RelativeLayout>
-    </RelativeLayout>
+            android:layout_alignEnd="@+id/circular_image_pofile"
+            android:contentDescription="@string/uploadimageicon"
+            android:src="@drawable/cam"/>
 
-
+    </RelativeLayout>
 
     <!--FIRST NAME-->
         <android.support.design.widget.TextInputLayout
@@ -101,61 +101,57 @@
             android:textColorHint="@color/black">
     <EditText
         android:id="@+id/edt_first_name_profile"
+        style="@style/edittextstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        style="@style/edittextstyle"
-        android:hint="@string/first_name"
-        android:drawableLeft="@drawable/user"
+        android:background="@android:color/transparent"
+        android:digits="@string/a_z"
         android:drawablePadding="@dimen/dp_7"
+        android:drawableLeft="@drawable/user"
+        android:hint="@string/first_name"
         android:imeOptions="actionNext"
         android:inputType="textCapWords"
         android:maxLines="1"
-        android:background="@android:color/transparent"
-        android:digits="@string/a_z"
-        />
+        android:textColor="@color/black"/>
         </android.support.design.widget.TextInputLayout>
 
     <!--LINE 1-->
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_52"
         android:layout_marginEnd="@dimen/dp_30"
-        />
+        android:layout_marginStart="@dimen/dp_52"
+        android:background="@color/grey"/>
 
     <!--LAST NAME-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        >
+        android:textColorHint="@color/black">
         <EditText
             android:id="@+id/edt_last_name_profile"
+            style="@style/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            style="@style/edittextstyle"
-            android:hint="@string/last_name"
-            android:drawableLeft="@drawable/user"
+            android:background="@android:color/transparent"
+            android:digits="@string/a_z"
             android:drawablePadding="@dimen/dp_7"
-            android:textColorHint="@color/black"
+            android:drawableLeft="@drawable/user"
+            android:hint="@string/last_name"
             android:imeOptions="actionDone"
             android:inputType="textCapWords"
             android:maxLines="1"
-            android:background="@android:color/transparent"
-            android:digits="@string/a_z"
-            />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
     </android.support.design.widget.TextInputLayout>
 
     <!--LINE 2-->
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_52"
         android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_52"
+        android:background="@color/grey"
         />
 
     <LinearLayout
@@ -166,36 +162,35 @@
     <!--DATE OF BIRTH-->
     <TextView
         android:id="@+id/txt_dob"
-        android:text="@string/date_of_birth"
-        android:textSize="@dimen/sp_12"
-        android:textColor="@color/yellow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_55"
         android:layout_marginEnd="@dimen/dp_20"
-        android:layout_marginTop="@dimen/dp_10"/>
+        android:layout_marginStart="@dimen/dp_55"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/date_of_birth"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/sp_12"/>
         <TextView
             android:id="@+id/txt_dob_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:drawableStart="@drawable/calender"
-            android:drawablePadding="@dimen/dp_7"
-            android:text="@string/ddmmyy"
-            android:enabled="false"
-            android:layout_marginStart="@dimen/dp_20"
             android:layout_marginEnd="@dimen/dp_20"
-            android:textColorHint="@color/yellow"
-            android:padding="@dimen/dp_10"/>
+            android:layout_marginStart="@dimen/dp_18"
+            android:drawablePadding="@dimen/dp_7"
+            android:drawableStart="@drawable/calender"
+            android:enabled="false"
+            android:padding="@dimen/dp_10"
+            android:text="@string/ddmmyy"
+            android:textColor="@color/black"
+            android:textColorHint="@color/yellow"/>
     </LinearLayout>
     <!--LINE 3-->
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_52"
         android:layout_marginEnd="@dimen/dp_30"
-        />
+        android:layout_marginStart="@dimen/dp_52"
+        android:background="@color/grey"/>
 
     <!--<CalendarView-->
         <!--android:id="@+id/calender_view"-->
@@ -210,18 +205,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:visibility="gone"
-        />
+        android:visibility="gone"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp_47"
+        android:layout_marginTop="@dimen/dp_10"
         android:text="@string/gender"
         android:textColor="@color/yellow"
         android:textSize="@dimen/sp_12"
-        android:layout_marginLeft="@dimen/sp_47"
-        android:layout_marginTop="@dimen/dp_10"
         />
 
     <!--GENDER-->
@@ -233,84 +227,82 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/gender"
+        android:layout_marginStart="@dimen/dp_13"
+        android:contentDescription="@string/gendericon"
         android:padding="@dimen/dp_12"
-        android:layout_marginLeft="@dimen/dp_13"
+        android:src="@drawable/gender"
         />
 
     <RadioGroup
         android:id="@+id/rg_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:checkedButton="@+id/rb_male_profile"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:checkedButton="@+id/rb_male_profile">
+        android:weightSum="2">
 
         <RadioButton
             android:id="@+id/rb_male_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/yellow"
+            android:padding="@dimen/sp_10"
             android:text="@string/male"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_15"
-            android:padding="@dimen/sp_10"
-            android:layout_weight="1"
-            android:buttonTint="@color/yellow"/>
+            tools:targetApi="lollipop" />
 
         <RadioButton
             android:id="@+id/rb_female_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/yellow"
+            android:padding="@dimen/sp_10"
             android:text="@string/female"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_15"
-            android:padding="@dimen/sp_10"
-            android:layout_weight="1"
-            android:buttonTint="@color/yellow"/>
-
+            tools:targetApi="lollipop" />
     </RadioGroup>
 </LinearLayout>
-    <!--GENDER END-->
 
-    <!--LINE 4-->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_52"
         android:layout_marginEnd="@dimen/dp_30"
-        />
+        android:layout_marginStart="@dimen/dp_52"
+        android:background="@color/grey"/>
 
 
     <!--EMAIL-->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/black"
-        >
+        android:textColorHint="@color/black">
         <EditText
             android:id="@+id/edt_email_profile"
+            style="@style/edittextstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            style="@style/edittextstyle"
-            android:hint="@string/email"
-            android:drawableLeft="@drawable/email"
+            android:background="@android:color/transparent"
             android:drawablePadding="@dimen/dp_7"
-            android:textColorHint="@color/yellow"
+            android:drawableLeft="@drawable/email"
+            android:hint="@string/email"
             android:inputType="textWebEmailAddress"
             android:maxLines="1"
-            android:background="@android:color/transparent"
-            />
+            android:textColor="@color/black"
+            android:textColorHint="@color/yellow"/>
     </android.support.design.widget.TextInputLayout>
 
     <!--LINE 5-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        android:layout_marginStart="@dimen/dp_52"
         android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_52"
+        android:background="@color/grey"
         />
 
     <!--NEXT-->
@@ -318,16 +310,15 @@
         style="@style/ButtonStyle"
         android:layout_width="@dimen/dp_200"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30"
-        android:text="@string/next"
-        android:textColor="@color/black"
-        android:background="@drawable/fill_button_pressed_selector"
-        android:textAllCaps="false"
-        android:onClick="next"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/dp_10"
-        />
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/fill_button_pressed_selector"
+        android:onClick="next"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/black"/>
 
 </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </LinearLayout>

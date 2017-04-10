@@ -76,12 +76,12 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
         switch (v.getId()){
 
             case R.id.txt_contoimage:
-                takePic();
+                takePic(5);
                 from = 1;
                 break;
 
             case R.id.txt_conttimage:
-                takePic();
+                takePic(5);
                 from = 2;
                 break;
         }
@@ -139,7 +139,7 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
         return true;
     }
 
-    private void takePic() {
+    private void takePic(final int value) {
         final Dialog dialog = new Dialog(this, android.R.style.Theme_Translucent);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.transparent)));
@@ -189,6 +189,7 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
             public void onClick(View view) {
                 Intent intent = new Intent(ReferenceContactsActivity.this, TakeImage.class);
                 intent.putExtra("from", "camera");
+                intent.putExtra("value", value);
                 startActivityForResult(intent, CAMERA_REQUEST);
                 dialog.dismiss();
             }
@@ -198,6 +199,7 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
             public void onClick(View view) {
                 Intent intent = new Intent(ReferenceContactsActivity.this, TakeImage.class);
                 intent.putExtra("from", "gallery");
+                intent.putExtra("value", value);
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
                 dialog.cancel();
             }
@@ -220,7 +222,7 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
             path = data.getStringExtra("filePath");
             if (path != null) {
                 File imgFile = new File(data.getStringExtra("filePath"));
-                if (imgFile.exists()) {
+//                if (imgFile.exists()) {
 //                    .setImageURI(Uri.fromFile(imgFile));
                     int count = 0;
                     count = path.lastIndexOf("/");
@@ -229,7 +231,7 @@ public class ReferenceContactsActivity extends AppCompatActivity implements View
                     }else if(from ==2){
                         txt_conttimage.setText(path.substring(count+1));
                     }
-                }
+//                }
             }else if(requestCode == CHOOSE_FILE_REQUESTCODE){
                 path = data.getData().getPath();
                 if (path != null) {

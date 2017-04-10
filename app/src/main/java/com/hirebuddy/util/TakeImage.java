@@ -160,52 +160,49 @@ public class TakeImage extends Activity{
 			if (requestCode == REQ_CODE_PICK_IMAGE)
 			{
 				Uri selectedImage = data.getData();
-				if (selectedImage != null){
+				if (selectedImage != null) {
 					Cursor cursor = getContentResolver()
 							.query(selectedImage,
-									new String[] { android.provider.MediaStore.Images.ImageColumns.DATA },
+									new String[]{android.provider.MediaStore.Images.ImageColumns.DATA},
 									null, null, null);
 					cursor.moveToFirst();
 					path = cursor.getString(0);
 
-//					if(!(value ==1 || value == 2)){
+					if (!(value == 5 || value == 11)) {
 
-//					setImageCrop(path, 0);
-//						cursor.close();
-//						Intent intent = new Intent();
-//						 path = "file://"+path;
-//						intent.putExtra("filePath", path);
-//						setResult(RESULT_OK, intent);
-//
-//						Bitmap bm = BitmapFactory.decodeFile(path);
-//						savebitmap(bm, path);
-//						finish();
+						setImageCrop(path, 0);
+						cursor.close();
+						Intent intent = new Intent();
+						path = "file://" + path;
+						intent.putExtra("filePath", path);
+						setResult(RESULT_OK, intent);
+
+						Bitmap bm = BitmapFactory.decodeFile(path);
+						savebitmap(bm, path);
+						finish();
 //						Intent intent = new Intent(TakeImage.this, UploadActivity.class);
 //						intent.putExtra("filePath", path);
 //						startActivity(intent);
 //						finish();
-//					}
-//					else{
+					} else {
 						Bitmap bm = BitmapFactory.decodeFile(path);
 						savebitmap(bm, path);
 //					setImageCrop(path, 0);
 						cursor.close();
-					String newpath=SaveImage(bm);
-					if(newpath!=null)
-					{
-						path=newpath;
-						Log.i("File path", ""+path);
-						runCropImage(newpath);
+						String newpath = SaveImage(bm);
+						if (newpath != null) {
+							path = newpath;
+							Log.i("File path", "" + path);
+							runCropImage(newpath);
 
-//					}
-//						Intent intent = new Intent();
-//						// path = "file://"+path;
-//						intent.putExtra("filePath", path);
-//						setResult(RESULT_OK, intent);
-//						finish();
-//					}
 
-				}
+							Intent intent = new Intent();
+//							path = "file://" + path;
+							intent.putExtra("filePath", path);
+							setResult(RESULT_OK, intent);
+							finish();
+						}
+					}
 				}
 			}
 			if (requestCode == CAMERA_PIC_REQUEST)
@@ -231,7 +228,14 @@ public class TakeImage extends Activity{
 					{
 						path=newpath;
 						Log.i("File path", ""+path);
-						runCropImage(newpath);
+//						runCropImage(newpath);
+
+
+						Intent intent = new Intent();
+//						path = "file://"+path;
+						intent.putExtra("filePath", path);
+						setResult(RESULT_OK, intent);
+						finish();
 					}
 
 //						Intent intent = new Intent();
@@ -274,6 +278,7 @@ public class TakeImage extends Activity{
 		super.onActivityResult(requestCode, resultCode, data);
 
 	}
+
 
 	private void setImageCrop(final String path, int i) {
 		try {
@@ -470,9 +475,9 @@ public class TakeImage extends Activity{
 	{
 		Intent intent = new Intent(this, CropImage.class);// create explicit intent
 		intent.putExtra(CropImage.IMAGE_PATH, path);// tell CropImage activity to look for image to crop
-		intent.putExtra(CropImage.SCALE, false);// allow CropImage activity to rescale image
-//		intent.putExtra(CropImage.ASPECT_X, value);// if the aspect ratio is fixed to ratio 3/2
-//		intent.putExtra(CropImage.ASPECT_Y, 1);
+		intent.putExtra(CropImage.SCALE, true);// allow CropImage activity to rescale image
+		intent.putExtra(CropImage.ASPECT_X, value);// if the aspect ratio is fixed to ratio 3/2
+		intent.putExtra(CropImage.ASPECT_Y, 5);
 //		if(x>400 && y>400){
 //			intent.putExtra(CropImage.OUTPUT_X,400);
 //			intent.putExtra(CropImage.OUTPUT_Y, 400);

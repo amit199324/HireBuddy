@@ -158,13 +158,12 @@
             android:name=".activity.SecurityQuestionsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-
-        <activity android:name=".util.TakeImage"/>
+        <activity android:name=".util.TakeImage" />
         <activity android:name=".activity.ForgotPinActivity" />
-        <activity android:name=".activity.LoginPopUpActivity"/>
+        <activity android:name=".activity.LoginPopUpActivity" />
         <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
 
-        <!--TAKE IMAGE FOR TARGET API 24 and above-->
+        <!-- TAKE IMAGE FOR TARGET API 24 and above -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.hirebuddy.provider"
@@ -172,12 +171,12 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".util.TakeImage2"/>
-
-
+        <activity android:name=".util.TakeImage2" />
+        <activity android:name=".activity.ProfileEditActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
