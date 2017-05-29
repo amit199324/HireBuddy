@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/CropLib/CropLib.iml" filepath="$PROJECT_DIR$/CropLib/CropLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/HireBuddy.iml" filepath="$PROJECT_DIR$/HireBuddy.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkedin-sdk/linkedin-sdk.iml" filepath="$PROJECT_DIR$/linkedin-sdk/linkedin-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycroplib/mycroplib.iml" filepath="$PROJECT_DIR$/mycroplib/mycroplib.iml" />
     </modules>
   </component>
 </project>

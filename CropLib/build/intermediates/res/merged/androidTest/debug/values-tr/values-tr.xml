@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="cancel">İptal</string>
-    <string name="no_storage_card">Hiçbir hafıza kartı</string>
-    <string name="not_enough_space">Yeterli alan yok</string>
-    <string name="preparing_card">hazırlama kart</string>
-    <string name="save">Kaydet</string>
-    <string name="saving_image">tasarruf görüntü</string>
-</resources>

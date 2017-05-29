@@ -1,1 +1,2 @@
-include ':app', ':CropLib'
+include ':app', ':CropLib', ':mycroplib',':linkedin-sdk'
+

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_pick_loc">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_postWish_acl"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_Locations_acl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_pickUpLoc_acl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/tv_pickUpLoc_acl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/back_grey"
+                    android:padding="7dp"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="@string/task_location"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pickUpLoc_acl"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="16dp"
+                        android:text="@string/address_landmark"
+                        android:textColor="@color/text_orange"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edt_pickAdd_acl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="7dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/line_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="16dp"
+                        android:text="@string/area_city_pincode"
+                        android:textColor="@color/text_orange"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edt_pickCity_acl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/location"
+                        android:padding="7dp"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/line_back" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_dropLoc"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/rl_pickUpLoc"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:visibility="visible">-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_dropLoc"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/back_grey"-->
+            <!--android:padding="7dp"-->
+            <!--android:paddingEnd="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--android:text="@string/drop_location"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_dropLoc"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="7dp"-->
+            <!--android:paddingEnd="0dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--android:text="@string/address_landmark"-->
+            <!--android:textColor="@color/text_orange"-->
+            <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_dropAdd"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="7dp"-->
+            <!--android:paddingEnd="0dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--android:text="@string/supertech_tower"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginBottom="4dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:background="@color/line_back" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="7dp"-->
+            <!--android:paddingEnd="0dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--android:text="@string/area_city_pincode"-->
+            <!--android:textColor="@color/text_orange"-->
+            <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_dropCity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableEnd="@drawable/location"-->
+            <!--android:padding="7dp"-->
+            <!--android:paddingEnd="16dp"-->
+            <!--android:paddingStart="16dp"-->
+            <!--android:text="@string/pragati_maidan_delhi_110001"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginBottom="4dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:background="@color/line_back" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--</RelativeLayout>-->
+
+
+            <RelativeLayout
+                android:id="@+id/rl_setDefaultLoc_acl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_pickUpLoc_acl"
+                android:layout_marginBottom="45dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_setDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/chkBox_setDefault_acl"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/set_as_default"
+                    android:textColor="@color/black" />
+
+
+                <CheckBox
+                    android:id="@+id/chkBox_setDefault_acl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/set_default_selector"
+                    android:gravity="center_vertical" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_postWish_acl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/back_orange"
+        android:gravity="center"
+        android:text="@string/post_your_wish"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

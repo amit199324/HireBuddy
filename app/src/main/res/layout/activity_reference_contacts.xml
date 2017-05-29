@@ -52,14 +52,10 @@
     android:layout_marginStart="@dimen/dp_20"
     android:layout_marginEnd="@dimen/dp_20">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/yellow"
-        >
+
         <EditText
             android:id="@+id/et_name_rc"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/yellow"
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,8 +66,8 @@
             android:background="@android:color/transparent"
             android:digits="@string/a_z"
             android:imeOptions="actionNext"
+            android:layout_marginTop="@dimen/dp_10"
             />
-    </android.support.design.widget.TextInputLayout>
     <View
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_width="match_parent"
@@ -79,15 +75,11 @@
         android:background="@color/grey"/>
 
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/yellow"
-        android:layout_marginTop="@dimen/dp_10"
-        >
+
         <EditText
             android:id="@+id/et_phone_rc"
-            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColorHint="@color/yellow"
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,7 +92,6 @@
             android:imeOptions="actionDone"
             android:singleLine="true"
             />
-    </android.support.design.widget.TextInputLayout>
     <View
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_width="match_parent"
@@ -115,16 +106,37 @@
         android:textColor="@color/yellow"
         android:textSize="@dimen/sp_12"
         android:text="@string/idproof"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
     <TextView
         android:id="@+id/txt_contoimage"
         android:layout_marginTop="@dimen/dp_10"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/camera"
         android:drawablePadding="@dimen/dp_10"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_16"
         android:text="@string/nfs"/>
+
+    <TextView
+        android:id="@+id/txt_remove1"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/cross"
+        android:backgroundTint="@color/yellow"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/sp_20" />
+    </RelativeLayout>
     <View
         android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
@@ -153,14 +165,10 @@
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/yellow"
-            >
+
             <EditText
                 android:id="@+id/et_name_rc2"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/yellow"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -171,8 +179,8 @@
                 android:background="@android:color/transparent"
                 android:digits="@string/a_z"
                 android:imeOptions="actionNext"
+                android:layout_marginTop="@dimen/dp_10"
                 />
-        </android.support.design.widget.TextInputLayout>
         <View
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_width="match_parent"
@@ -180,15 +188,10 @@
             android:background="@color/grey"/>
 
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/yellow"
-            >
             <EditText
                 android:id="@+id/et_phone_rc2"
-                android:textColorHint="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="@color/yellow"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -201,7 +204,6 @@
                 android:digits="@string/zero_9"
                 android:imeOptions="actionDone"
                 />
-        </android.support.design.widget.TextInputLayout>
         <View
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_width="match_parent"
@@ -215,6 +217,10 @@
             android:textColor="@color/yellow"
             android:textSize="@dimen/sp_12"
             android:text="@string/idproof"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <TextView
             android:id="@+id/txt_conttimage"
             android:layout_marginTop="@dimen/dp_10"
@@ -225,6 +231,21 @@
             android:textColor="@color/black"
             android:textSize="@dimen/sp_16"
             android:text="@string/nfs"/>
+
+        <TextView
+            android:id="@+id/txt_remove2"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/cross"
+            android:backgroundTint="@color/yellow"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp_20" />
+        </RelativeLayout>
         <View
             android:layout_marginTop="@dimen/dp_5"
             android:layout_width="match_parent"

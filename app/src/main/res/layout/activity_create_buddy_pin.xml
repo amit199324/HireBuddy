@@ -24,7 +24,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/dp_40"
         android:contentDescription="@string/applogo"
-        android:src="@drawable/appicon" />
+        android:src="@drawable/appicon_profile" />
 
     <TextView
         android:layout_width="match_parent"
@@ -48,7 +48,9 @@
         app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
         app:passwordToggleDrawable="@drawable/hidable"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/yellow">
+        app:passwordToggleTint="@color/yellow"
+
+        >
 
         <EditText
             android:id="@+id/edt_buddy_pin"
@@ -61,7 +63,8 @@
             android:inputType="numberPassword"
             android:maxLength="6"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_16"
+            android:paddingTop="@dimen/dp_7"/>
     </android.support.design.widget.TextInputLayout>
 
     <View
@@ -83,7 +86,8 @@
         app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
         app:passwordToggleDrawable="@drawable/hidable"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/yellow">
+        app:passwordToggleTint="@color/yellow"
+        >
 
         <EditText
             android:id="@+id/edt_confirm_buddy_pin"
@@ -96,7 +100,8 @@
             android:inputType="numberPassword"
             android:maxLength="6"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_16"
+            android:paddingTop="@dimen/dp_7"/>
     </android.support.design.widget.TextInputLayout>
 
     <View

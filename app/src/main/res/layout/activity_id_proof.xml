@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/activity_id_proof"
+<LinearLayout android:id="@+id/activity_id_proof"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,7 +13,7 @@
         android:textColor="@color/white"
         android:background="@color/header"
         android:textSize="@dimen/sp_20"
-        android:text="@string/idproof"
+        android:text="@string/idaaddproof"
         android:gravity="center"/>
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="@string/inOrder"
+        android:text="@string/inOrdert"
         android:gravity="center"
         android:textSize="@dimen/sp_16"
         android:padding="@dimen/dp_10"/>
@@ -50,15 +48,21 @@
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_15">
+        android:layout_marginStart="@dimen/dp_20"
+        android:background="@drawable/square_curve_box"
+        android:layout_marginEnd="@dimen/dp_20">
         <TextView
             android:id="@+id/txt_s_one"
             android:textSize="@dimen/sp_16"
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/right_arrow"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@drawable/down_arrow"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
             />
         <Spinner
             android:id="@+id/spin_idtype"
@@ -69,12 +73,6 @@
 
     </RelativeLayout>
 
-    <View
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_25"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"/>
     <TextView
         android:layout_marginStart="@dimen/dp_25"
         android:layout_marginTop="@dimen/dp_10"
@@ -86,12 +84,12 @@
 
     <EditText
         android:id="@+id/edt_eyq_idproof"
-        android:visibility="gone"
         style="@style/edittextstyle"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/eyidt"
-        android:background="@drawable/underlinegrey"
+        android:background="@drawable/square_curve_box"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:layout_marginTop="@dimen/dp_10"
@@ -105,7 +103,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/txt_uidproof"
-            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginStart="@dimen/dp_20"
             android:layout_marginEnd="@dimen/dp_50"
             android:layout_marginTop="@dimen/dp_10"
             android:layout_width="match_parent"
@@ -114,31 +112,27 @@
             android:drawablePadding="@dimen/dp_10"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_16"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:background="@drawable/square_curve_box"
             android:text="@string/nfs"/>
         <TextView
             android:id="@+id/txt_uidproof_remove"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_centerVertical="true"
-            android:text="x"
-            android:background="@drawable/circle"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/cross"
+            android:backgroundTint="@color/yellow"
             android:layout_alignParentRight="true"
             android:gravity="center"
             android:textStyle="bold"
-            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:textColor="@color/yellow"
             android:textSize="@dimen/sp_20" />
     </RelativeLayout>
 
-    <View
-        android:layout_marginTop="@dimen/dp_5"
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_25"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        />
+
    <TextView
        android:id="@+id/txt_addproof"
        android:paddingTop="@dimen/dp_5"
@@ -157,15 +151,20 @@
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_15">
+        android:layout_marginStart="@dimen/dp_20"
+        android:background="@drawable/square_curve_box"
+        android:layout_marginEnd="@dimen/dp_20">
         <TextView
             android:id="@+id/txt_s_two"
             android:textSize="@dimen/sp_16"
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/right_arrow"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            android:drawableEnd="@drawable/down_arrow"
             />
         <Spinner
             android:id="@+id/spin_addtype"
@@ -176,13 +175,7 @@
 
     </RelativeLayout>
 
-    <View
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_25"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        />
+
     <TextView
         android:layout_marginStart="@dimen/dp_25"
         android:layout_marginTop="@dimen/dp_10"
@@ -199,7 +192,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/eyaddt"
-        android:background="@drawable/underlinegrey"
+        android:background="@drawable/square_curve_box"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:layout_marginTop="@dimen/dp_10"
@@ -213,7 +206,7 @@
         android:layout_height="wrap_content">
     <TextView
         android:id="@+id/txt_uaddproof"
-        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_50"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
@@ -221,15 +214,18 @@
         android:drawableStart="@drawable/camera"
         android:drawablePadding="@dimen/dp_10"
         android:textColor="@color/black"
+        android:background="@drawable/square_curve_box"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
         android:textSize="@dimen/sp_16"
         android:text="@string/nfs"/>
         <TextView
             android:id="@+id/txt_uaddproof_remove"
             android:layout_width="@dimen/dp_30"
             android:layout_height="@dimen/dp_30"
-            android:layout_centerVertical="true"
-            android:text="x"
-            android:background="@drawable/circle"
+            android:background="@drawable/cross"
+            android:backgroundTint="@color/yellow"
             android:layout_alignParentRight="true"
             android:gravity="center"
             android:textStyle="bold"
@@ -238,14 +234,6 @@
             android:textColor="@color/yellow"
             android:textSize="@dimen/sp_20" />
     </RelativeLayout>
-    <View
-        android:layout_marginTop="@dimen/dp_5"
-        android:layout_marginStart="@dimen/dp_25"
-        android:layout_marginEnd="@dimen/dp_25"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/grey"
-        />
     <Button
         android:id="@+id/next_id_proof"
         style="@style/ButtonfillStyle"

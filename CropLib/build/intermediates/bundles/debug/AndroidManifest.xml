@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.janmuller.android.simplecropimage"
     android:versionCode="1"
@@ -6,6 +7,6 @@
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="24" />
 
 </manifest>

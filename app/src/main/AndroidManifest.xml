@@ -89,11 +89,28 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- FOR READING OTP -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- android:name="android.support.multidex.MultiDexApplication" -->
+
+
+    <!-- GOOGLE LOCATION REQUEST -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
         android:name=".util.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/app_icon"
-        android:label="@string/app_name"
+        android:icon="@drawable/appicon_profile"
+        android:label="@string/hire_buddy"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -158,10 +175,18 @@
             android:name=".activity.SecurityQuestionsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
-        <activity android:name=".util.TakeImage" />
-        <activity android:name=".activity.ForgotPinActivity" />
-        <activity android:name=".activity.LoginPopUpActivity" />
-        <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
+        <activity
+            android:name=".util.TakeImage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ForgotPinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.LoginPopUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
 
         <!-- TAKE IMAGE FOR TARGET API 24 and above -->
         <provider
@@ -174,9 +199,81 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".util.TakeImage2" />
-        <activity android:name=".activity.ProfileEditActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".util.TakeImage2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".activity.ProfileEditActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- INSTAGRAM Activity -->
+        <activity android:name=".Instagram.MainActivityInstagram"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- FOR CROPPING -->
+        <activity
+            android:name="com.amit.mycroplib.CropImageActivity"
+            android:theme="@style/MyCropTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- FACEBOOK META DATA      testmobulous123@gmail.com -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="44b5915daf7330d0de425de1d6bc82af9e2d242a" />
+
+        <activity
+            android:name=".Twitter.TwitterLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.CheckBuddyPinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.PhysicalActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.TaskLocationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.PostYourWishActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- GOOGLE LOCATION -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- The API key for Google Maps-based APIs. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key_project" />
+
+        <service
+            android:name=".util.FetchAddressService"
+            android:exported="false" />
+
+        <activity android:name=".activity.ThankYouWish"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
     </application>
 
 </manifest>

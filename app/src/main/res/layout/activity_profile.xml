@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hirebuddy.activity.ProfileActivity"
+    >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color_profile"
     android:orientation="vertical"
-    tools:context="com.hirebuddy.activity.ProfileActivity">
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_pa"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/header"
         android:gravity="center"
         android:text="@string/profile_info"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_20"/>
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -30,58 +41,60 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-            <FrameLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_180"
-                android:scrollbarAlwaysDrawVerticalTrack="true">
-
-        <ImageView
-            android:id="@+id/img_backimage"
+        <FrameLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/coverimage"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/bg_profile"/>
-            </FrameLayout>
+            android:layout_height="@dimen/dp_180"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <ImageView
+                android:id="@+id/img_backimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/coverimage"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/bg_profile" />
+        </FrameLayout>
+
         <ImageView
             android:id="@+id/img_coveruicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
             android:contentDescription="@string/uploadimageicon"
-            android:src="@drawable/cam"/>
+            android:src="@drawable/cam" />
 
         <!--<ImageView-->
-            <!--android:id="@+id/imageView_logo"-->
-            <!--android:layout_width="@dimen/dp_40"-->
-            <!--android:layout_height="@dimen/dp_40"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:layout_marginTop="@dimen/dp_50"-->
-            <!--android:contentDescription="@string/applogo"-->
-            <!--android:src="@drawable/logo"/>-->
+        <!--android:id="@+id/imageView_logo"-->
+        <!--android:layout_width="@dimen/dp_40"-->
+        <!--android:layout_height="@dimen/dp_40"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="@dimen/dp_50"-->
+        <!--android:contentDescription="@string/applogo"-->
+        <!--android:src="@drawable/logo"/>-->
 
         <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@+id/imageView_logo"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:text="@string/har_zaroorat_ka_sathi"/>-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/imageView_logo"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="@string/har_zaroorat_ka_sathi"/>-->
 
 
         <ImageView
             android:id="@+id/circular_image_pofile"
-            android:layout_width="@dimen/dp_100"
-            android:layout_height="@dimen/dp_100"
-            android:background="@color/black"
-            android:contentDescription="@string/userimage"
-            android:scaleType="fitXY"
-            android:src="@drawable/appicon"
-            android:layout_below="@+id/img_coveruicon"
+            android:layout_width="@dimen/dp_85"
+            android:layout_height="@dimen/dp_90"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/dp_77"
-            android:layout_marginEnd="@dimen/dp_10"/>
+            android:layout_below="@+id/img_coveruicon"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginTop="87dp"
+            android:contentDescription="@string/userimage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon_no_border"
+           />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -89,16 +102,12 @@
             android:layout_alignBottom="@+id/circular_image_pofile"
             android:layout_alignEnd="@+id/circular_image_pofile"
             android:contentDescription="@string/uploadimageicon"
-            android:src="@drawable/cam"/>
+            android:src="@drawable/cam" />
 
     </RelativeLayout>
 
     <!--FIRST NAME-->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_fname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black">
+
     <EditText
         android:id="@+id/edt_first_name_profile"
         style="@style/edittextstyle"
@@ -112,8 +121,8 @@
         android:imeOptions="actionNext"
         android:inputType="textCapWords"
         android:maxLines="1"
+        android:textColorHint="@color/yellow"
         android:textColor="@color/black"/>
-        </android.support.design.widget.TextInputLayout>
 
     <!--LINE 1-->
     <View
@@ -124,10 +133,7 @@
         android:background="@color/grey"/>
 
     <!--LAST NAME-->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/black">
+
         <EditText
             android:id="@+id/edt_last_name_profile"
             style="@style/edittextstyle"
@@ -142,8 +148,8 @@
             android:inputType="textCapWords"
             android:maxLines="1"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"/>
-    </android.support.design.widget.TextInputLayout>
+            android:textColorHint="@color/yellow"
+            />
 
     <!--LINE 2-->
     <View
@@ -154,22 +160,22 @@
         android:background="@color/grey"
         />
 
-    <LinearLayout
-        android:id="@+id/ll_dob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_dob"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
     <!--DATE OF BIRTH-->
-    <TextView
-        android:id="@+id/txt_dob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_20"
-        android:layout_marginStart="@dimen/dp_55"
-        android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/date_of_birth"
-        android:textColor="@color/yellow"
-        android:textSize="@dimen/sp_12"/>
+    <!--<TextView-->
+        <!--android:id="@+id/txt_dob"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="@dimen/dp_20"-->
+        <!--android:layout_marginStart="@dimen/dp_55"-->
+        <!--android:layout_marginTop="@dimen/dp_10"-->
+        <!--android:text="@string/date_of_birth"-->
+        <!--android:textColor="@color/yellow"-->
+        <!--android:textSize="@dimen/sp_12"/>-->
         <TextView
             android:id="@+id/txt_dob_profile"
             android:layout_width="match_parent"
@@ -178,12 +184,13 @@
             android:layout_marginStart="@dimen/dp_18"
             android:drawablePadding="@dimen/dp_7"
             android:drawableStart="@drawable/calender"
-            android:enabled="false"
             android:padding="@dimen/dp_10"
-            android:text="@string/ddmmyy"
+            android:hint="@string/date_of_birth"
+            android:text="@string/date_of_birth"
             android:textColor="@color/black"
-            android:textColorHint="@color/yellow"/>
-    </LinearLayout>
+            android:textColorHint="@color/yellow"
+            android:layout_marginTop="@dimen/_6sdp"/>
+    <!--</LinearLayout>-->
     <!--LINE 3-->
     <View
         android:layout_width="match_parent"
@@ -277,10 +284,7 @@
 
 
     <!--EMAIL-->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/black">
+
         <EditText
             android:id="@+id/edt_email_profile"
             style="@style/edittextstyle"
@@ -294,7 +298,6 @@
             android:maxLines="1"
             android:textColor="@color/black"
             android:textColorHint="@color/yellow"/>
-    </android.support.design.widget.TextInputLayout>
 
     <!--LINE 5-->
     <TextView
@@ -322,3 +325,4 @@
 </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+    </ScrollView>

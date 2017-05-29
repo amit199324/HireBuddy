@@ -22,7 +22,7 @@
         android:contentDescription="@string/applogo"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_80sdp"
-        android:src="@drawable/appicon"
+        android:src="@drawable/appicon_profile"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_gravity="center_horizontal"
         />

@@ -31,6 +31,19 @@
             android:textColor="@color/white"
             android:textSize="@dimen/sp_20"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_crop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Crop"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/tv_save_pea"
+            android:padding="@dimen/_5sdp"/>
+
+
     </RelativeLayout>
 
 
@@ -46,12 +59,12 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_180"
             android:scrollbarAlwaysDrawVerticalTrack="true" >
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            />
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
         </FrameLayout>
 
         <ImageView
@@ -65,7 +78,7 @@
             android:background="@color/black"
             android:contentDescription="@string/userimage"
             android:scaleType="fitXY"
-            android:src="@drawable/appicon" />
+            android:src="@drawable/appicon_profile" />
 
     </RelativeLayout>
 

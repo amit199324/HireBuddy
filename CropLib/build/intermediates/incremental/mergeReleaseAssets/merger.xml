@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/mobulous11/HireBuddy/CropLib/src/main/assets"/><source path="/home/mobulous11/HireBuddy/CropLib/assets"/><source path="/home/mobulous11/HireBuddy/CropLib/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/home/mobulous11/HireBuddy/CropLib/src/release/assets"/></dataSet></merger>

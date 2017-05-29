@@ -39,4 +39,71 @@
     *******************ENTIRE APP************************
     <color name="button_pressed_color">#8c5a00</color>
 
+    *******************HOME ACTIVITY**********************
+    <color name="tab_unselected_color">#9a9a9a</color>
+    <color name="what_your_wish_color">#8d8d8d</color>
+    <color name="what_your_wish_background_color">#cdcdcd</color>
+    <color name="home_background_color">#f5f5f5</color>
+    <color name="single_row_trending_1_color">#f6f6f6</color>
+    <color name="love_guru_color">#25CE97</color>
+    <color name="artist_color">#FF8493</color>
+    <color name="blue">#4f89f8</color>
+    <color name="start_ups_color">#34d0d5</color>
+    <color name="cleaner_color">#db91f9</color>
+    <color name="repair_n_maintenance_color">#fc9ac7</color>
+    <color name="home_service_color">#49ce68</color>
+    <color name="education_color">#6f97ec</color>
+
+    ************************PHYSICAL ACTIVITY************************
+    <color name="physical_activity_upper_color">#5095F3</color>
+    <color name="physical_activity_below_color">#6CA7F2</color>
+    <color name="physical_activity_line_color">#3a8bbd</color>
+
+    *******************ADDRESS FETCHER***********************
+    <color name="back_orange">#E0943B</color>
+    <color name="back_grey">#D1D1D1</color>
+    <color name="text_orange">#DD9C55</color>
+    <color name="back_pick_loc">#ECECEC</color>
+    <color name="line_back">#9E9E9E</color>
+
+
+    <color name="servicebox">#3A64D7</color>
+    <color name="productbox">#F88117</color>
+    <color name="physicalbox">#6480A0</color>
+    <color name="virtualbox">#F76768</color>
+    <color name="nowbox">#40781D</color>
+    <color name="laterbox">#FABA1F</color>
+
+    <color name="greytext">#5e5d5d</color>
+    <color name="calenderyellow">#fcc843</color>
+    <color name="calendergrey">#dcdcdc</color>
+
+    ***************************THANK YOU WISH********************************
+    <color name="background_thank_you_wish">#ececec</color>
+    <color name="finish_btn_background">#E0953E</color>
+    <color name="thanks_your_using_hirebuddy_color">#4A4A4A</color>
+
+    *******************************Trending Adapter********************
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="green" type="color">#FF99CC00</item>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+
+    <integer-array name="androidcolors">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+    </integer-array>
+
 </resources>

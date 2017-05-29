@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">HireBuddy</string>
+    <string name="app_name"></string>
+    <string name="hire_buddy">HireBuddy</string>
 
 
     ******************LOGIN********************
@@ -8,6 +9,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="phone_number_em">Phone Number/ Email/ Buddy-Id</string>
     <string name="enter_your_buddy_pin">Enter your Buddy PIN</string>
+
     <string name="forgot_buddy_pin">Forgot Buddy PIN?</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_up_as">Sign Up As</string>
@@ -62,6 +64,7 @@
     <string name="peotp_buddy_id">Please enter One Time Password that was send to your Registered Phone Number and E-mail</string>
     <string name="valid_buddy_id">Please enter valid Buddy Id</string>
     <string name="eotp">Enter OTP</string>
+    <string name="otp_not_matched">OTP Not Matched</string>
     <string name="resend">Resend</string>
     <string name="verify">Verify</string>
     <string name="enter_buddy_pin">Enter Buddy PIN</string>
@@ -69,6 +72,7 @@
     <string name="confirm_buddy_pin">Confirm Buddy PIN</string>
     <string name="create">Create</string>
     <string name="create_buddy_pin">Create Buddy PIN</string>
+
     <string name="resendotp">OTP will be send to your registered phone number and email address</string>
     <string name="potp">Please enter the OTP</string>
 
@@ -83,7 +87,7 @@
     <string name="lin">Linkedin</string>
     <string name="insta">Instagram</string>
     <string name="gplus">Google +</string>
-    <string name="skip"><u>Skip</u></string>
+    <string name="skip">Skip</string>
     <string name="ifuskip">If you skip this step you will get limited number of tasks</string>
     <string name="ifuskipl">If you skip this step you will get limited access</string>
     <string name="verified">Verified</string>
@@ -123,7 +127,8 @@
 
     *****************Id Proof*****************
     <string name="idproof">Identity Proof</string>
-    <string name="inOrder">In order to get your account confirmed, you need to upload the identity proofs</string>
+    <string name="idaaddproof">Identity &amp; Address Proof</string>
+    <string name="inOrdert">In order to get your account confirmed, you need to upload the identity and address proofs</string>
     <string name="cit">Choose identity type</string>
     <string name="aproof">Address Proof</string>
     <string name="choose_address_proof">Choose Addess Proof</string>
@@ -134,7 +139,9 @@
 
     *****************Security Questions*****************
     <string name="sq">Security Questions</string>
-    <string name="pstsq">Please select two security questions and enter your answers</string>
+    <!--<string name="pstsq">Please select two security questions and enter your answers</string>-->
+    <string name="snsqa">Select security questions and answers</string>
+    <string name="qwbutvyi">These question will be used to verify your identity and help recover your password in case you forget it</string>
     <string name="queso">Question 1</string>
     <string name="quest">Question 2</string>
     <string name="syq">Select your question</string>
@@ -194,7 +201,8 @@
     <string name="pgkc">Please Generate Key-Code</string>
     <string name="Search">Search</string>
     <string name="invemail">Invalid Email</string>
-    <string name="bcsutnc">By clicking on Signup, you confirm/agree that you accept the\n\nTerms and conditions\tand \tPrivacy Policy</string>
+    <string name="bcsutnc">By clicking on Signup, you agree to Hirebuddy\'s \nTerms and conditions and Privacy Policy</string>
+    <!--<string name="bcsutnc">By clicking on Signup, you confirm/agree that you accept the\n\nTerms and conditions\tand \tPrivacy Policy</string>-->
     <string name="a_z"> abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ </string>
     <string name="zero_9">1234567890</string>
     <string name="crs">Customer Registration Successful</string>
@@ -205,4 +213,178 @@
     <string name="coverimage">coverimage</string>
     <string name="matchedsymbol">matchedsymbol</string>
     <string name="title_activity_profile_edit">ProfileEditActivity</string>
+
+    <!--******************************CROPPING***********************************-->
+
+    <string name="main_drawer_load">Load Image for cropping</string>
+    <string name="main_drawer_open">Open navigation drawer</string>
+    <string name="main_drawer_close">Close navigation drawer</string>
+
+    <string name="main_action_crop">CROP</string>
+    <string name="main_action_rotate">Rotate 90 degrees clockwise</string>
+    <string name="drawer_option_title">Crop View Presets</string>
+    <string name="drawer_option_oval">Circular</string>
+    <string name="drawer_option_rect">Rectangular</string>
+    <string name="drawer_option_min_max">Min/Max limits override</string>
+    <string name="drawer_option_customized_overlay">Customized Overlay</string>
+    <string name="drawer_option_scale_center">Scale Center Inside</string>
+    <string name="drawer_option_title2">Customization Toggles</string>
+    <string name="drawer_option_toggle_scale">Image Scale: %1s</string>
+    <string name="drawer_option_toggle_shape">Crop Shape: %1s</string>
+    <string name="drawer_option_toggle_guidelines">Guidelines: %1s</string>
+    <string name="drawer_option_toggle_aspect_ratio">Aspect Ratio: %1s</string>
+    <string name="drawer_option_toggle_auto_zoom">Auto zoom: %1s</string>
+    <string name="drawer_option_toggle_max_zoom">Max zoom level: %1s</string>
+    <string name="drawer_option_set_initial_crop_rect">Set initial crop rectangle</string>
+    <string name="drawer_option_reset_crop_rect">Reset crop rectangle to initial</string>
+    <string name="drawer_option_toggle_multitouch">Multitouch: %1s</string>
+    <string name="drawer_option_toggle_show_overlay">Show Overlay: %1s</string>
+    <string name="drawer_option_toggle_show_progress_bar">Show Progress Bar: %1s</string>
+
+    <!--FACEBOOK-->
+    <string name="facebook_app_id">1928658310702007</string>
+    <string name="save">Save</string>
+
+    <!--LINKED IN-->
+    <string name="information_message_loading">Loading...</string>
+
+
+    *************************RETROFIT MESSAGES******************
+
+    <string name="neterror">Internet Error</string>
+    <string name="swentwrong">Slow Internet Connection, Try again</string>
+    <string name="no_server_response">No Server Response</string>
+
+    ***********************************HOME**********************************
+    <string name="notification">Notification</string>
+    <string name="posted_wishes">Posted Wishes</string>
+    <string name="chat">Chat</string>
+    <string name="my_wishes">My Wishes</string>
+    <string name="home">Home</string>
+    <string name="whats_your_wish_today">Whats your wish today?</string>
+    <string name="physical_categories">Physical Categories</string>
+    <string name="physical_category">Physical Category</string>
+    <string name="virtual_categories">Virtual Categories</string>
+    <string name="virtual_category">Virtual Category</string>
+    <string name="trending_categories">Trending Categories</string>
+    <string name="home_service">Home\nService</string>
+    <string name="education">Education</string>
+    <string name="love_guru">Love Guru</string>
+    <string name="start_ups">Startups</string>
+    <string name="cleaners">Cleaners</string>
+    <string name="repair_n_maintenance"><![CDATA[Repair &\nMaintenance]]></string>
+
+    <string-array name="physical_categories_options">
+        <item>Repair</item>
+        <item>Education</item>
+        <item>Office</item>
+        <item>Home\nService</item>
+    </string-array>
+
+    <string-array name="virtual_categories_options">
+        <item>Content\nWritting</item>
+        <item>Video\nDevelopment</item>
+        <item>Logo\nDesign</item>
+        <item>Website\nDevelopment</item>
+    </string-array>
+
+    *************************PHYSICAL CATEGORY*******************
+    <string name="professional_service">Professional\nService</string>
+    <string name="health_n_wellness">Health &amp;\nWellness</string>
+    <string name="cleaning_buddy">Cleaning Buddy</string>
+    <string name="cook_baking_buddy"><![CDATA[Cook & Baking Buddy]]></string>
+    <string name="pet_care_buddy">Pet Care Buddy</string>
+    <string name="personal_care_buddy">Personal Care Buddy</string>
+    <string name="artist">Artist</string>
+    <string name="fun_entertainment"><![CDATA[Fun & Entertainment]]></string>
+    <string name="gps">GPS</string>
+    <string-array name="cleaning_buddy_titles">
+        <item>Garage\nCleaning</item>
+        <item>Pool\nCleaning</item>
+        <item>Window\nCleaning</item>
+        <item>General\nCleaning</item>
+    </string-array>
+
+    <string-array name="physical_upper_options">
+        <item>Professional\nService</item>
+        <item>Health &amp;\nWellness</item>
+        <item>Repair &amp;\nMaintenance</item>
+        <item>Professional\nService</item>
+        <item>Home\nService</item>
+    </string-array>
+
+    ************************ADDRESS FETCHER*****************************
+    <string name="add_a_new_address">Add a new address</string>
+    <string name="add_current_location">Add current location</string>
+    <string name="pick_up_location">Pick Up Location</string>
+    <string name="address_landmark">Address/Landmark</string>
+    <string name="area_city_pincode">Area/City/Pincode</string>
+    <string name="mayur_vihar_delhi_110091">Mayur Vihar, Delhi, 110091</string>
+    <string name="flat_no_23_wing_c_wave_tower">Flat no 23, Wing C, Wave Tower</string>
+    <string name="drop_location">Drop Location</string>
+    <string name="supertech_tower">Supertech Tower</string>
+    <string name="pragati_maidan_delhi_110001">Pragati Maidan, Delhi, 110001</string>
+    <string name="set_as_default">Set as Default</string>
+
+
+    *************************Post Your Wish******************
+    <string name="post_your_wish">Post Your Wish</string>
+    <string name="welcome_to_hb">Welcome to Hirebuddy</string>
+    <string name="whaturwish">What\'s your wish today?</string>
+    <string name="service">Service</string>
+    <string name="product">Product</string>
+    <string name="mayiknowtype">May I know type of service?</string>
+    <string name="physical">Physical</string>
+    <string name="virtual">Virtual</string>
+    <string name="pleasehelp">Please help me with categories</string>
+    <string name="mayiknowtime">May I know when you looking\nfor this service?</string>
+    <string name="mayiknowprod">May I know when you are\nlooking for the product?</string>
+    <string name="now">Now</string>
+    <string name="later">Later</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="phmwywt">Please help me with your wish title and description</string>
+    <string name="ywt">Your wish title</string>
+    <string name="descywish">Describe your wish to here</string>
+    <string name="pshareatt">Please share attachment</string>
+    <string name="document">Document</string>
+    <string name="media">Media</string>
+    <string name="recording">Recording</string>
+    <string name="attachments">Attachments</string>
+    <string name="ptellyoureq">Please tell us your requirement</string>
+    <string name="hireon">Hire on :</string>
+    <string name="hourly">Hourly basis</string>
+    <string name="daily">Daily basis</string>
+    <string name="monthly">Monthly basis</string>
+    <string name="project">Project basis</string>
+    <string name="noofhours">Number of hours :</string>
+    <string name="noofbuddies">Number of buddies :</string>
+    <string name="mayiknowbudget">May I know your budget for the wish</string>
+    <string name="fix_rate">Fix rate</string>
+    <string name="flexiblerate">Flexible rate</string>
+    <string name="perbuddy">Per Buddy</string>
+    <string name="perhour">Per Hour</string>
+    <string name="estdbudget">Estimated Budget</string>
+    <string name="addlocation">Add Location</string>
+
+    <string name="select_category">Select Category</string>
+    <string name="no_attach">No Attachment</string>
+    <string name="enter_budget">Enter Budget</string>
+
+
+    <!--<string name="google_api_key_rajeev">AIzaSyDwGbXUFxJsZzcDwGfhiX5lAF-77B-irnU</string>-->
+    <string name="google_api_key_project">AIzaSyBM2Yc-9uzcQ1a6O5UsP_rgakL4N_uSAlg</string>
+    <string name="task_location">Task Location</string>
+    <string name="your_wish_posted_successfully">Your Wish Posted\n Successfully!</string>
+    <string name="thanks_for_using_hirebuddy">Thanks for using HireBuddy</string>
+    <string name="full_name">Full Name</string>
+    <string name="area">Area</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="pin_code">Pin Code</string>
+
+    *************************Add Current Location***************************
+    <string name="pls_enter_area_city_pincode">Please enter Area/City/Pincode</string>
+    <string name="pls_enter_address_landmark">Please enter Address/Landmark</string>
+
 </resources>

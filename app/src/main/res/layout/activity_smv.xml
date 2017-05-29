@@ -32,7 +32,9 @@
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
         >
+        <!--FACEBOOK-->
     <RelativeLayout
+        android:id="@+id/rl_fb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_40">
@@ -45,7 +47,26 @@
         android:textSize="@dimen/sp_16"
         android:textColor="@color/fb"
         android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_fb_right_arrow"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/right_arrow"
+            android:drawablePadding="@dimen/dp_5"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/verified"
+            android:gravity="center_vertical"
+            />
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
     <TextView
+        android:id="@+id/tv_fb_verified"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,6 +77,7 @@
         android:textSize="@dimen/sp_14"
         android:textColor="@color/verified"
         android:gravity="center_vertical"
+        android:visibility="gone"
         />
 
     </RelativeLayout>
@@ -66,7 +88,9 @@
         android:layout_height="@dimen/dp_1"
         android:background="@color/grey"/>
 
+        <!--TWITTER-->
  <RelativeLayout
+        android:id="@+id/rl_twitter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
      >
@@ -78,8 +102,10 @@
         android:text="@string/twitter"
         android:textSize="@dimen/sp_16"
         android:textColor="@color/twitter"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:id="@+id/textView" />
     <TextView
+        android:id="@+id/tv_twitter_right_arrow"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,14 +116,41 @@
         android:textColor="@color/verified"
         android:gravity="center_vertical"
         />
-    </RelativeLayout>
+
+
+     <TextView
+         android:id="@+id/tv_twitter_verified"
+         android:layout_marginTop="@dimen/dp_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:drawableStart="@drawable/verify"
+         android:drawablePadding="@dimen/dp_5"
+         android:text="@string/verified"
+         android:textSize="@dimen/sp_14"
+         android:textColor="@color/verified"
+         android:gravity="center_vertical"
+         android:visibility="gone"
+         />
+     <!--<com.twitter.sdk.android.core.identity.TwitterLoginButton-->
+         <!--android:id="@+id/twitter_login_button"-->
+         <!--android:layout_width="match_parent"-->
+         <!--android:layout_height="wrap_content"-->
+         <!--android:layout_centerInParent="true"-->
+         <!--android:visibility="gone"-->
+         <!--/>-->
+
+ </RelativeLayout>
         <View
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginBottom="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_1"
             android:background="@color/grey"/>
+
+        <!--LINKED IN-->
  <RelativeLayout
+        android:id="@+id/rl_linkedin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <TextView
@@ -110,6 +163,7 @@
         android:textColor="@color/lin"
         android:gravity="center_vertical"/>
     <TextView
+        android:id="@+id/tv_linkedin_right_arrow"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,6 +173,20 @@
         android:textSize="@dimen/sp_16"
         android:textColor="@color/verified"
         android:gravity="center_vertical"/>
+     <TextView
+         android:id="@+id/tv_linkedin_verified"
+         android:layout_marginTop="@dimen/dp_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:drawableStart="@drawable/verify"
+         android:drawablePadding="@dimen/dp_5"
+         android:text="@string/verified"
+         android:textSize="@dimen/sp_14"
+         android:textColor="@color/verified"
+         android:gravity="center_vertical"
+         android:visibility="gone"
+         />
     </RelativeLayout>
         <View
             android:layout_marginTop="@dimen/dp_10"
@@ -126,7 +194,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_1"
             android:background="@color/grey"/>
+
+        <!--INSTAGRAM-->
  <RelativeLayout
+        android:id="@+id/rl_instagram"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <TextView
@@ -139,6 +210,7 @@
         android:textColor="@color/insta"
         android:gravity="center_vertical"/>
     <TextView
+        android:id="@+id/tv_instagram_right_arrow"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,6 +220,20 @@
         android:textSize="@dimen/sp_16"
         android:textColor="@color/verified"
         android:gravity="center_vertical"/>
+     <TextView
+         android:id="@+id/tv_instagram_verified"
+         android:layout_marginTop="@dimen/dp_2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:drawableStart="@drawable/verify"
+         android:drawablePadding="@dimen/dp_5"
+         android:text="@string/verified"
+         android:textSize="@dimen/sp_14"
+         android:textColor="@color/verified"
+         android:gravity="center_vertical"
+         android:visibility="gone"
+         />
     </RelativeLayout>
         <View
             android:layout_marginTop="@dimen/dp_10"
@@ -155,7 +241,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_1"
             android:background="@color/grey"/>
+
+        <!--GOOGLE PLUS-->
     <RelativeLayout
+        android:id="@+id/rl_google_plus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <TextView
@@ -168,6 +257,7 @@
         android:textColor="@color/gplus"
         android:gravity="center_vertical"/>
     <TextView
+        android:id="@+id/tv_google_plus_right_arrow"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -177,6 +267,27 @@
         android:textSize="@dimen/sp_16"
         android:textColor="@color/verified"
         android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_google_plus_verified"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawableStart="@drawable/verify"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/verified"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/verified"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            />
+        <ProgressBar
+            android:id="@+id/progress_bar_smv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="false"
+            />
     </RelativeLayout>
         </LinearLayout>
     <Button
